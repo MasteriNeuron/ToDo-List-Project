@@ -41,12 +41,7 @@ class TaskResource(Resource):
                   type: string
                 priority:
                   type: string
-<<<<<<< HEAD
 
-=======
-                status:
-                  type: string
->>>>>>> d99a9b66f15b79ee8793583c7924f433537dfd6d
         responses:
           201:
             description: Task created
@@ -54,14 +49,10 @@ class TaskResource(Resource):
         args = task_parser.parse_args()
         user_id = int(get_jwt_identity())
         try:
-<<<<<<< HEAD
           due_date = datetime.strptime(args['due_date'], '%Y-%m-%d').date()
           due_time = datetime.strptime(args['due_time'], '%H:%M:%S').time()
 
 
-=======
-            due_date = datetime.fromisoformat(args['due_date'] + 'T' + args['due_time'])
->>>>>>> d99a9b66f15b79ee8793583c7924f433537dfd6d
         except ValueError:
             return {'message': 'Invalid date or time format. Use ISO format'}, 400
         task = Task(
