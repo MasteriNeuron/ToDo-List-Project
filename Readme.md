@@ -160,16 +160,18 @@ http://localhost:5000/apidocs
 **Example Request:**
 ```json
 {
-  "password": "abhi",
-  "username": "abhishek"
+  "email": "shubham@pw.live",
+  "password": "shubham@123",
+  "username": "shubham"
 }
 ```
 
 ### 2️⃣ Login User
 ```json
 {
-  "password": "abhi",
-  "username": "abhishek"
+  "email": "shubham@pw.live",
+  "password": "shubham@123",
+  "username": "shubham"
 }
 ```
 Copy `access_token` and use it in Authorization header:
@@ -181,11 +183,12 @@ Bearer <your-access-token>
 **Request Body:**
 ```json
 {
-    "title": "Buy groceries",
-    "description": "Milk, eggs, and bread",
-    "due_date": "2023-12-31T23:59:59",
-    "priority": "medium"
-}
+    "title": "Finish project report",
+    "description": "Complete the final report for the client presentation.",
+    "due_date": "2025-02-15",
+    "due_time": "17:00:00",
+    "priority": "High"
+  }
 ```
 
 ### 4️⃣ Access Tasks
@@ -198,11 +201,12 @@ Bearer <your-access-token>
 **Request Body:**
 ```json
 {
-    "title": "Buy groceries",
-    "description": "Milk, eggs, and bread",
-    "due_date": "2023-12-31T23:59:59",
-    "priority": "low"
-}
+    "title": "Finish project report",
+    "description": "Complete the final report for the client presentation.",
+    "due_date": "2025-02-15",
+    "due_time": "12:00:00",
+    "priority": "High"
+  }
 ```
 
 ### 6️⃣ Delete Task
