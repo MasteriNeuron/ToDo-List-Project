@@ -21,11 +21,7 @@ class Task(db.Model):
     title = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text)
     due_date = db.Column(db.DateTime)
-<<<<<<< HEAD
-    due_time = db.Column(db.Time)
-=======
     due_time = db.Column(db.Time)  # Add this field
->>>>>>> d99a9b66f15b79ee8793583c7924f433537dfd6d
     priority = db.Column(db.String(20), default='medium')
     status = db.Column(db.String(20), default='pending')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
@@ -43,7 +39,4 @@ class Task(db.Model):
             'status': self.status,
             'created_at': self.created_at.isoformat()
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> d99a9b66f15b79ee8793583c7924f433537dfd6d
